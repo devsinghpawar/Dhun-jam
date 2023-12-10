@@ -112,8 +112,6 @@ const RegularDiv = styled.div`
 const RegularPrice = styled.div`
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  /* justify-content: space-between; */
   gap: 12.5%;
   position: relative;
   right: 15%;
@@ -157,6 +155,10 @@ const RegularInput = styled.input`
   border-radius: 10px;
 
   pointer-events: ${({ disabled }) => (disabled ? "none" : "auto")};
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 30px;
+  }
 `;
 
 const RupeeIcon = styled.div`
