@@ -247,7 +247,7 @@ const AdminDashboard = () => {
   const handleCustomAmountChange = (e) => {
     const amount = parseInt(e.target.value, 10);
     setCustomAmount(amount);
-    setSaveEnabled(amount > 99);
+    setSaveEnabled(amount > 98);
   };
 
   const handleRegularAmountChange = (key, value) => {
@@ -259,7 +259,7 @@ const AdminDashboard = () => {
     setSaveEnabled(
       Object.values(updatedRegularAmounts).every((amount) => amount > 0) &&
         Object.values(updatedRegularAmounts).every(
-          (amount, index) => amount > [79, 59, 39, 19][index]
+          (amount, index) => amount >= [79, 59, 39, 19][index]
         )
     );
   };
